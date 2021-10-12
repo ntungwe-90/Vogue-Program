@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { 
+    flex-grow: 1;
+    display: flex;
+}
+
+aside { 
+    flex-shrink: 0;
+    background-color: #a5b4fc;
+    /* width: 120px; */
+    padding: .75rem 1.5rem;
+
+}
+
+aside>img{
+    width: 9rem;
+    object-fit: scale-down;
+    display: block;
+}
+
+aside + div {
+    flex-grow: 1;
+}
+
+aside + div nav {
+    width: 100%;
+    padding: 15px;
+    background-color: #4843d9;
+    display: flex;
+}
+
+/* aside .buttons {
+
+} */
+
+aside button {
+    /* white-space: nowrap; */
+    width: 100%;
+    display: block;
+    padding: 15px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #dbeafe;
+    margin: 0 0 6px 0
+}
+
+aside button.active {
+    background-color: #4843d9;
+    color: #fff
+}
+
+nav > button{
+    margin-left: auto;
+    background-color:#60a5fa;
+    color: white;
+     border-radius: 10px;
+     padding: 5px;
+     border: none;
+}
+
+aside + div nav + div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    width: fit-content;
+    padding: 1.5rem 1.5rem 1.5rem 5.5rem;
+    grid-gap: 1rem;
+}
+
+.card{
+    position: relative;
+    width: 170px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #e2e2e2;
+    overflow: hidden;
+}
+
+.card p, .card h6 {
+    margin-left: 6px;
+}
+.card h6 {
+    margin-top: 5px
+}
+.card p {
+    margin-bottom: 5px
+}
+
+.card.cols-2 {
+    grid-column: 1/-1;
+    margin: auto
+}
+
+
+.card>img{
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.card>button{
+    width: 100%;
+    border: none; 
+    color: white;
+    padding: .5em
+}
+
+.card.green>button{
+    background-color: #36d98d;
+}
+.card.magenta>button{
+    background-color:#ee05f2 ;
+}
+
+.card.royal>button{
+    background-color:#4169e1 ;
+}
+.card.gold>button{
+    background-color:#e8c91b ;
+}
+
+.card:hover > .fingerprint {
+    transform: translateY(0);
+}
+
+.card>.fingerprint{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5); 
+  transition: transform .15s ease;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.fingerprint>button{
+    border:1px solid white;
+    background-color: transparent;
+    padding: 10px 22px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+.fingerprint>img{
+    width: 40%;
+    margin: 0 auto;
+    object-fit: scale-down;
+
+}
+
+footer { 
+    background-color: #1e3a8a;
+    padding: 1rem 15px
+}
